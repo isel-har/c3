@@ -1,7 +1,7 @@
 NAME=cub3d
 CFLAGS= -Wextra -Wall -Werror
 LINK= -lmlx -framework OpenGL -framework AppKit -lm
-INC= inc/cub.h  inc/objects.h inc/get_next_line.h
+INC= inc/cub.h  inc/objects.h inc/get_next_line.h inc/cub2.h
 MLX = minilibx/libmlx.a
 GNL= gnl/get_next_line.c  gnl/get_next_line_utils.c
 #------------------------files---------------------------------------------

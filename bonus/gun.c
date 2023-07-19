@@ -6,11 +6,20 @@
 /*   By: isel-har <isel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:33:57 by isel-har          #+#    #+#             */
-/*   Updated: 2023/06/22 17:38:05 by isel-har         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:14:28 by isel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"../inc/cub.h"
+
+void	check_failure(void *ptr)
+{
+	if (ptr == 0)
+	{
+		write(2, IMG_ERR, 18);
+		exit (1);
+	}
+}
 
 void	gun_sprite(t_cub *cub)
 {
@@ -19,18 +28,25 @@ void	gun_sprite(t_cub *cub)
 	cub->gun_sprite = ft_malloc(sizeof(void *) * 7);
 	cub->gun_sprite[0] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/1.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[0]);
 	cub->gun_sprite[1] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/2.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[1]);
 	cub->gun_sprite[2] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/3.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[2]);
 	cub->gun_sprite[3] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/4.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[3]);
 	cub->gun_sprite[4] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/5.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[4]);
 	cub->gun_sprite[5] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/6.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[5]);
 	cub->gun_sprite[6] = mlx_xpm_file_to_image(cub->m_ptr, \
 	"textures/7.xpm", &cub->w, &cub->h);
+	check_failure(cub->gun_sprite[6]);
 }
 
 int	gun_animation(t_cub *cub)

@@ -6,7 +6,7 @@
 /*   By: isel-har <isel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 17:43:38 by isel-har          #+#    #+#             */
-/*   Updated: 2023/06/23 12:59:05 by isel-har         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:16:35 by isel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	check_texture(t_cub *cub)
 	cub->e_texture, &t->width, &t->height);
 	texture_failure(t);
 	t->ptr = mlx_xpm_file_to_image(cub->m_ptr, \
-	"textures/door.xpm", &t->width, &t->height);
+	DOOR_PATH, &t->width, &t->height);
 	texture_failure(t);
 	free(t);
 }
@@ -67,5 +67,5 @@ void	set_textures(t_cub *cub)
 	cub->south_txt = new_texture(cub, cub->s_texture);
 	cub->west_txt = new_texture(cub, cub->w_texture);
 	cub->east_txt = new_texture(cub, cub->e_texture);
-	cub->door_txt = new_texture(cub, "textures/DOOR_2E.xpm");
+	cub->door_txt = new_texture(cub, DOOR_PATH);
 }

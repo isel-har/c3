@@ -6,7 +6,7 @@
 /*   By: isel-har <isel-har@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 11:59:34 by isel-har          #+#    #+#             */
-/*   Updated: 2023/06/25 17:59:24 by isel-har         ###   ########.fr       */
+/*   Updated: 2023/07/19 12:15:18 by isel-har         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # define NUM_RAYS 		WIN_WIDTH
 # define S_SIZE			32
 # define MEM_ERR		"memory allocation error\n"
+# define DOOR_PATH		"textures/DOOR_2E.xpm"
 # define IMG_ERR		"Invalid file path\n"
 # define NORTH			'N'
 # define SOUTH			'S'
